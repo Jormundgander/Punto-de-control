@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Sistema de Incidencias</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <!-- Font Awesome CSS-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <!-- Google fonts - Popppins for copy-->
+  
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/css/select2.min.css" rel="stylesheet" />
+
+    <!-- orion icons-->
+    <link rel="stylesheet" href="css/orionicons.css">
+    <!-- theme stylesheet-->
+    <link rel="stylesheet" href="css/style.default.css" id="theme-stylesheet">
+    <!-- Custom stylesheet - for your changes-->
+    <link rel="stylesheet" href="css/custom.css">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="img/favicon.png?3">
+
+    <link rel="stylesheet" href="css/animate.css">
+  </head>
+  <body>
+      <div class="row">
+        <div class="col-xl-12 col-12 col-lg-12 d-flex justify-content-center">
+            <img src="img/cintillo.jpg" style="width:100%;" class="img-fluid zoomIn animated text-center" style="height:15px;" alt="Cintillo de la Gobernación">
+        </div>
+      </div>
+
+      <div class="row mb-3 mt-2">
+        <div class="col-xl-12 col-12 col-lg-12">
+          <img src="img/nombre_sistema_1.png" class="img-fluid text-center" style="width:100%;" alt="Presentación del Sistema">
+        </div>
+      </div>
+       
+      <div class="row mb-5">
+        <div class="col-lg-12 px-lg-12 col-xl-12 pr-4">
+          <div class="card w-50 mx-auto mb-5">
+            <div class="card-header">
+                <h3 class="text-center zoomIn animated">Recuperación de datos</h3>
+            </div>
+            <div class="card-body mb-5 mb-5">
+                <form id="loginForm" action="index.html" class="mt-5 zoomIn animated">
+                  <!--Cédula-->
+                  <div class="input-group w-75 mx-auto mb-3 border-0">
+                      <select class="input-group-prepend border-0 shadow" name="" id="" required>
+                          <option value="V" class="text-center">&nbsp;&nbsp;&nbsp;V</option>
+                          <option value="E" class="text-center">&nbsp;&nbsp;&nbsp;E</option>
+                          <option value="C" class="text-center">&nbsp;&nbsp;&nbsp;C</option>
+                          <option value="P" class="text-center">&nbsp;&nbsp;&nbsp;P</option>
+                        </select>
+                        <input type="text" class="form-control border-0 shadow" placeholder="Cédula" aria-label="Text input with dropdown button">
+                  </div>
+                  
+                  <!--Contraseña-->
+                  <!--<div class="input-group mb-3 w-75 mx-auto">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text border-0 shadow" id="basic-addon1">
+                          <img src="img/key.png" alt="Contraseña">
+                        </span>
+                      </div>
+                      <input type="password" class="form-control form-contrl-lg border-0 shadow " placeholder="Contraseña" aria-label="Username" aria-describedby="basic-addon1">
+                    </div>-->
+                    
+                   <!--Preguntas-->
+                  <!-- <div class="form-group d-flex justify-content-center">
+                    <select class="form-control w-75 mx-auto preguntas border-0 shadow" id="preguntas">
+                        <option selected disabled>Seleccione una pregunta de seguridad</option>
+                        <option value="¿Cuál fué su mejor amigo de la infancia?">¿Cuál fué su mejor amigo de la infancia?</option>
+                        <option value="¿Cuál es su comida favorita?">¿Cuál es su comida favorita?</option>
+                        <option value="¿Por qué usted se considera increíble?">¿Por qué usted se considera increíble?</option>
+                        <option value="¿Qué es lo que más te caracteriza?">¿Qué es lo que más te caracteriza?</option>
+                      </select>
+                    </div>-->
+
+                    <!--Respuestas secretas-->
+                    <div class="input-group mb-4 w-75 mx-auto d-xl-none d-none d-lg-none">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text border-0 shadow" id="basic-addon1">
+                            <img src="img/pencil.png" alt="Contraseña">
+                          </span>
+                        </div>
+                        <input type="text" class="form-control form-contrl-lg border-0 shadow " placeholder="Respuesta de seguridad" aria-label="Username" aria-describedby="basic-addon1">
+                    </div>
+
+                    <div class="d-flex justify-content-center mb-2">
+                      <a href="login.html" class="badge badge-pill badge-danger">Iniciar sesión</a>&nbsp;&nbsp;
+                      <a href="registro.html" class="badge badge-pill badge-danger">Deseo registrarme</a>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                      <button type="submit" class="btn btn-danger btn-lg shadow px-5">Buscar datos</button>
+                    </div>
+                </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- JavaScript files-->
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/js/select2.min.js"></script>
+
+    <script>
+      $(document).ready(function() {
+          $('.preguntas').select2({});
+
+      });
+    </script>-->
+
+  </body>
+</html>

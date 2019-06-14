@@ -17,8 +17,13 @@
         foreach ($usuariosRegistrados as $valor) {
             
             if ($valor['usuario_ci'] == $cedula && $valor['password'] == $pass) {
-                
-                require_once 'Vistas/index.php';
+
+                /* 
+                * Redirección al index, pasamos la variable url con valor 'home' vía GET, así una vez que
+                * el usuario se logee entrará en la interfaz home y se podrá visualizar la posición actual 
+                * en la que se encuentra a través de la url
+                */
+                header('Location:index.php?url=home');
             
             }
         }

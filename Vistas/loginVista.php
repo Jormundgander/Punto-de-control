@@ -41,19 +41,21 @@
         <div class="col-lg-12 px-lg-12 col-xl-12 pr-4">
           <div class="card w-50 mx-auto">
             <div class="card-header">
-                <h3 class="text-center zoomIn an
-                9imated">Iniciar Sesión</h3>
+              <h3 class="text-center zoomIn animated">Iniciar Sesión</h3>
             </div>
             <div class="card-body mb-5">
-                <form id="loginForm" action="index.php?url=login" method="POST" class="mt-4 zoomIn animated">
+
+                <div class="respuestaServidor"></div>
+
+                <form id="loginForm" action="#" method="POST" class="mt-4 zoomIn animated">
                     <div class="input-group w-75 mx-auto mb-3">
-                        <select class="input-group-prepend border-0 shadow" name="letra_cedula" id="" required>
+                        <select name="letra_cedula" id="letra_cedula" class="input-group-prepend border-0 shadow" required>
                             <option value="V" class="text-center">&nbsp;&nbsp;&nbsp;V</option>
                             <option value="E" class="text-center">&nbsp;&nbsp;&nbsp;E</option>
                             <option value="C" class="text-center">&nbsp;&nbsp;&nbsp;C</option>
                             <option value="P" class="text-center">&nbsp;&nbsp;&nbsp;P</option>
                           </select>
-                          <input name="cedula" type="text" class="form-control border-0 shadow" placeholder="Cédula" aria-label="Text input with dropdown button">
+                          <input name="cedula" id="cedula" type="text" class="form-control border-0 shadow" placeholder="Cédula" aria-label="Text input with dropdown button">
                     </div>
                     <div class="input-group mb-3 w-75 mx-auto">
                         <div class="input-group-prepend">
@@ -61,7 +63,7 @@
                             <img src="Vistas/img/key.png" alt="">
                           </span>
                         </div>
-                      <input name="pass" type="password" class="form-control form-contrl-lg border-0 shadow " placeholder="Contraseña" aria-label="Username" aria-describedby="basic-addon1" required>
+                      <input name="pass" id="pass" type="password" class="form-control form-contrl-lg border-0 shadow " placeholder="Contraseña" aria-label="Username" aria-describedby="basic-addon1" required>
                     </div>
                     <div class="form-group mb-2 d-flex justify-content-center">
                       <div class="custom-control custom-checkbox">
@@ -70,11 +72,11 @@
                       </div>
                     </div>
                     <div class="d-flex justify-content-center mb-3">
-                      <a href="registro.html" class="badge badge-pill badge-danger">Deseo registrarme</a>&nbsp;&nbsp;
+                      <a href="index.php?url=registro" class="badge badge-pill badge-danger">Deseo registrarme</a>&nbsp;&nbsp;
                       <a href="recuperacion.html" class="badge badge-pill badge-danger"> Recuperar datos</a>
                     </div>
                     <div class="d-flex justify-content-center">
-                      <button type="submit" class="btn btn-danger btn-lg shadow px-5">Acceder</button>
+                      <input type="submit" id="submit" class="btn btn-danger btn-lg shadow px-5" value="Acceder">
                     </div>
                 </form>
             </div>
@@ -82,12 +84,52 @@
         </div>
       </div>
     <!-- JavaScript files-->
-    <script
+    <!--<script
     src="https://code.jquery.com/jquery-3.4.1.min.js"
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-    crossorigin="anonymous"></script>
+    crossorigin="anonymous"></script>-->
+    <script src="Vistas/vendor/jquery/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+
+    <!--<script>
+      $(function(){
+        $('#submit').click(function(){
+          
+          //Obtenemos los datos ingresados por los usuarios
+          var datosFormulario = {
+            'letra_cedula' : $('#letra_cedula').val(),
+            'cedula'       : $('#cedula').val(),
+            'pass'         : $('#pass').val()
+          }
+
+          $.ajax({
+            url: 'index.php?url=login',
+            type: 'POST',
+            data: datosFormulario,
+            success: function(response){
+
+              if (response == 'homeControlador') {
+                //Si el controlador devuelve 'homeControlador' redireccionamos
+                window.location.href = 'index.php?url=home';
+              } else {
+                //Autenticacion fallida, disparamos alerta
+                Swal.fire({
+                  type                : 'error',
+                  title               : 'Autenticación fallida',
+                  text                : response,
+                  confirmButtonColor  : '#bd2130',
+                  confirmButtonText   : 'Lo intentaré de nuevo'
+                });
+
+              }
+
+            }
+          });
+        });
+      })
+    </script>-->
 
   </body>
 </html>

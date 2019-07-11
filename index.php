@@ -2,7 +2,8 @@
 
     require_once 'Config/autoload.php';
     require_once 'Config/database.php';
-    require_once 'Config/rutas.php';
+
+    define('PATH_CONTROLADORES', 'Controladores/');
 
     if (isset($_GET['url'])) {
 
